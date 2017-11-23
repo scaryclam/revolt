@@ -5,10 +5,12 @@
 # Copyright © 2016 Adrian Perez <aperez@igalia.com>
 #
 # Distributed under terms of the GPLv3 license.
+from os import environ, path as P
+import sys
+from revolt import main
+
 
 def adjust_import_path():
-    from os import environ, path as P
-    import sys
     devel = environ.get("__REVOLT_DEVELOPMENT")
     if devel and devel.strip():
         # Prepend source directory path.
@@ -19,6 +21,5 @@ def adjust_import_path():
 
 
 if __name__ == "__main__":
-    adjust_import_path()
-    from revolt import main
+    #adjust_import_path()
     main(__file__)
