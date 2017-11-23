@@ -1,6 +1,0 @@
-; vim: set ft=cfg:
-[flake8]
-filename = *.py
-hang-closing = False
-max-line-length = 110
-inline-quotes = double
